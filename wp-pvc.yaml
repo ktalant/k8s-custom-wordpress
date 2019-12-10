@@ -1,0 +1,64 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"name":"mysql-persistent-storage","namespace":"default"},"spec":{"accessModes":["ReadWriteMany"],"resources":{"requests":{"storage":"1Gi"}},"volumeMode":"Filesystem"}}
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+    creationTimestamp: 2019-12-10T00:52:59Z
+    finalizers:
+    - kubernetes.io/pvc-protection
+    name: mysql-persistent-storage
+    namespace: default
+    resourceVersion: "2211"
+    selfLink: /api/v1/namespaces/default/persistentvolumeclaims/mysql-persistent-storage
+    uid: 69114632-1ae7-11ea-82a6-0242ac11001d
+  spec:
+    accessModes:
+    - ReadWriteMany
+    resources:
+      requests:
+        storage: 1Gi
+    volumeName: mysql-persistent-storage
+  status:
+    accessModes:
+    - ReadWriteMany
+    capacity:
+      storage: 1Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"name":"wordpress-persistent-storage","namespace":"default"},"spec":{"accessModes":["ReadWriteMany"],"resources":{"requests":{"storage":"1Gi"}},"volumeMode":"Filesystem"}}
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+    creationTimestamp: 2019-12-10T00:51:01Z
+    finalizers:
+    - kubernetes.io/pvc-protection
+    name: wordpress-persistent-storage
+    namespace: default
+    resourceVersion: "2049"
+    selfLink: /api/v1/namespaces/default/persistentvolumeclaims/wordpress-persistent-storage
+    uid: 22d217b9-1ae7-11ea-82a6-0242ac11001d
+  spec:
+    accessModes:
+    - ReadWriteMany
+    resources:
+      requests:
+        storage: 1Gi
+    volumeName: wordpress-persistent-storage
+  status:
+    accessModes:
+    - ReadWriteMany
+    capacity:
+      storage: 1Gi
+    phase: Bound
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
